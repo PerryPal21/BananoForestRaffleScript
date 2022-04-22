@@ -9,7 +9,7 @@ const db = new StormDB(engine);
 db.default({ totalAmount: 0, weightage: {}, balance: {} });
 
 // Specifying the API address making it easier to change just in case creeper is down
-var explorerAddress = "https://api.creeper.banano.cc/v2/accounts/";
+var explorerAddress = "https://api.bananode.eu/v2/accounts/";
 
 // Calculating the date from a week ago using unixtime
 // Obviously this script will be used at a designated time in order to ensure that every transaction is counted
