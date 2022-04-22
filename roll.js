@@ -2,6 +2,7 @@
 const StormDB = require("stormdb");
 var colors = require("colors");
 const fetch = require("node-fetch");
+const config = require("./config.json");
 
 // The local json database is being initialized
 const engine = new StormDB.localFileEngine("./storage.json");
@@ -13,7 +14,7 @@ var explorerAddress = "https://api.bananode.eu/v2/accounts/";
 
 // Calculating the date from a week ago using unixtime
 // Obviously this script will be used at a designated time in order to ensure that every transaction is counted
-var unixtime = Math.floor(Date.now() / 1000) - 604800;
+var unixtime = config.timestamp;
 console.log("Unixtime = " + unixtime);
 
 // This array stores the different organization addresses
